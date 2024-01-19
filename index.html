@@ -1,102 +1,145 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
+    <title>Virginia's Portfolio</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            background: url('your-background-image.jpg') center/cover;
-            color: #fff;
+            background-image: url('BG.jpg'); /* Replace 'BG.jpg' with the correct path to your image */
+            background-size: cover; /* This property ensures that the background image covers the entire body */
+            background-position: center; /* This property centers the background image */
+            background-color: rgba(171, 166, 166, 0.993); /* Adjust the alpha value (0.5) to control the transparency */
+            color: #fff; /* Text color for better visibility on the background image */
+            display: flex; /* Use flexbox to align items */
+            justify-content: space-between; /* Space between header and content */
+            align-items: center; /* Center items vertically */
+            flex-wrap: wrap; /* Wrap items to the next line if needed */
         }
 
         header {
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: #4a4949aa;
+            color: #fff;
             text-align: center;
-            padding: 1em 0;
+            padding: 1em;
+            flex-basis: 100%; /* Take up the full width */
         }
 
         section {
-            padding: 40px;
+            padding: 2em;
+            flex-basis: 70%; /* Take up 70% of the available space */
         }
 
-        h1, h2 {
-            color: #fff;
+        #profile-photo {
+    flex-basis: 30%;
+    text-align: center;
+    margin-top: 2em;
+    margin-left: 35%; /* Adjust the left margin for smaller screens */
+}
+
+@media (min-width: 768px) {
+    #profile-photo {
+        margin-left: 35%; /* Adjust the left margin for medium-sized screens */
+    }
+}
+
+@media (min-width: 1200px) {
+    #profile-photo {
+        margin-left: 35%; /* Adjust the left margin for larger screens */
+        margin-top:5%;
+    }
+}
+
+        img {
+            width: 100%; /* Make sure the image takes up the full width of its container */
+            border-radius: 50%; /* Apply border-radius for a circular profile photo */
         }
 
-        .skills-list {
-            list-style: none;
+        h2 {
+            color: #fff9f9;
+        }
+
+        ul {
+            list-style-type: none;
             padding: 0;
         }
 
-        .skills-list li {
-            margin-bottom: 10px;
-        }
-
-        .soft-skills {
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 5px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
-            color: #333;
+        li {
+            margin-bottom: 1em;
         }
 
         footer {
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: #333;
+            color: #fff;
             text-align: center;
-            padding: 1em 0;
+            padding: 1em;
+            flex-basis: 100%; /* Take up the full width */
         }
     </style>
 </head>
 
 <body>
-
     <header>
-        <h1>Your Name</h1>
-        <p>Web Developer | Digital Marketer | Photographer</p>
+        <h1>Virginia Wang'ang'a</h1>
+        <p>Passionate about Nature and Software development</p>
     </header>
 
-    <section id="technical-skills">
-        <h2>Technical Skills</h2>
-        <ul class="skills-list">
-            <li>Research and Development</li>
-            <li>Agile Methodologies and Project Management</li>
-            <li>Writing content articles</li>
-            <li>Thought leadership</li>
-            <li>Social Media management</li>
-            <li>Search Engine Optimization (SEO)</li>
-            <li>Creating marketing material</li>
-            <li>Professional photography</li>
-            <li>Website Management</li>
-            <li>Updating client portfolio</li>
-            <li>MoSCoW Prioritization - Project Management</li>
-            <li>Digital communication</li>
+    <div id="profile-photo">
+        <img src="profile.jpg" alt="Profile Photo">
+    </div>
+    <section id="introduction">
+        <h2>PROFESSIONAL SUMMARY</h2>
+        <p>
+            
+I am a dedicated and detail-oriented recent IT undergraduate specializing in Software Engineering, eager to
+leverage academic excellence and hands-on experience to enhance organizational efficiency through IT solutions.
+Proficient in analytical thinking and problem-solving, with a track record of successfully executing IT projects.
+Demonstrates a strong ability to apply theoretical knowledge to practical situations, showcasing a proactive
+attitude and a collaborative team spirit. Seeking an opportunity in software engineering to contribute to projects
+and continue professional development to grow in my career while contributing to company’s goals and
+objectives.
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2>Programming Languages </h2>
+        <ul>
+            <li>Python  R    PHP   C    C#  </li>
+            <li>Java  JavaScript </li>
+            <li>Kotlin</li>
+            <!-- Add more skills here -->
         </ul>
     </section>
 
-    <section id="soft-skills" class="soft-skills">
-        <h2>Soft Skills</h2>
-        <ul class="skills-list">
-            <li>Excellent communication and Leadership</li>
-            <li>Team Management and Team collaborator</li>
-            <li>Problem-solving mindset</li>
-            <li>Presentation and Visualization</li>
-            <li>Adaptability and Flexibility, Time management and Organization</li>
-            <li>Willingness to Learn</li>
-            <li>Multi-tasking</li>
+    <section id="soft-skills">
+        <h2>Frameworks</h2>
+        <ul>
+            <li>Laravel</li>
+            <li>CodeIgnitor</li>
+            <li>Django</li>
+            <li>Flask for Python</li>
+            <!-- Add more soft skills here -->
         </ul>
     </section>
 
+    <section id="Hobbies">
+        <h2>Hobbies </h2>
+        <ul>
+            <li>Meditation</li>
+            <li>Gardening</li>
+            <li>Reading </li>
+            <!-- Add more soft skills here -->
+        </ul>
+    </section>
+
+    
+    
     <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <p>Contact: virginiachristine55@gmail.com</p>
     </footer>
-
 </body>
-
 </html>
