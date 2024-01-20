@@ -5,14 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    
     <title>Virginia's Portfolio</title>
     <style>
+
+nav {
+            background-color: rgb(13, 13, 69);
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav a {
+            color: rgba(194, 185, 14, 0.57);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #eae8e6; /* Change to your desired hover color */
+        }
+
+        /* Smooth scrolling effect */
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Courier New', Courier, monospace;
             font-weight: bold;
             margin: 0;
             padding: 0;
-            background-image: url('bg2.jpg'); /* Replace 'BG.jpg' with the correct path to your image */
+            background-image: url('bg1.jpg'); /* Replace 'BG.jpg' with the correct path to your image */
             background-size: cover; /* This property ensures that the background image covers the entire body */
             background-position: center; /* This property centers the background image */
             background-color: rgba(89, 89, 89, 0.48);
@@ -59,10 +84,15 @@
     }
 }
 
-        img {
-            width: 100%; /* Make sure the image takes up the full width of its container */
-            border-radius: 50%; /* Apply border-radius for a circular profile photo */
-        }
+img {
+    width: 100%;
+    border-radius: 20%;
+}
+
+#profile-photo img {
+    border-radius: 50%; /* Make the border-radius fully circular for the profile photo */
+}
+
 
         h2 {
             color: #fff9f9;
@@ -85,9 +115,37 @@
             flex-basis: 100%; /* Take up the full width */
         }
 
-        {
-  box-sizing: border-box;
+        .creative-skills-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
+
+.creative-skills-list li {
+    width: 80px; /* Set a suitable width for your images */
+    text-align: center;
+}
+
+.skills-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.skills-list li {
+    width: 200px; /* Set a suitable width for your images */
+    text-align: right; /* Align the text content to the right */
+}
+
+
+
+        {
+           box-sizing: border-box;
+        }
 
 
 
@@ -221,14 +279,24 @@
 </head>
 
 <body>
+
+    <nav>
+        <a href="#introduction">Professional Summary</a>
+        <a href="#skills">Programming Languages</a>
+        <a href="#frameworks">Frameworks</a>
+        <a href="#work_experience">Work Experience</a>
+        <a href="#Learning">Learning Timeline</a>
+        <a href="#Hobbies">Hobbies</a>
+    </nav>
     <header>
         <h1>SOFTWARE DEVELOPER</h1>
         <p>VIRGINIA WANG'ANG'A</p>
     </header>
 
-    <div id="profile-photo">
-        <img src="profile.jpg" alt="Profile Photo">
+    <div id="profile-photo" style="border: 10px solid navy; border-radius: 15px; padding: 10px; background-color: white;">
+        <img src="Virgie.jpeg" alt="Profile Photo" style="width: 100%; border-radius: 15px;">
     </div>
+    
     <section id="introduction">
         <h2>PROFESSIONAL SUMMARY</h2>
         <p id="typing-text"></p>
@@ -262,28 +330,37 @@
         };
     </script>
 
-    <section id="skills">
-        <h2>Programming Languages </h2>
-        <ul>
-            <li>Python  R    PHP   C    C#  </li>
-            <li>Java  JavaScript </li>
-            <li>Kotlin</li>
-            <!-- Add more skills here -->
-        </ul>
-    </section>
+<section id="skills">
+    <h2>Programming Languages and IDES </h2>
+    <ul class="creative-skills-list">
+        <li><img src="python.svg" alt="Python Logo" style="width: 100px; height: 100px;"></li>
+        <li><img src="R.svg" alt="R Logo" style="width: 100px; height: 100px;"></li>
+        <li><img src="php.svg" alt="PHP Logo" style="width: 100px; height: 100px;"></li>
+        <li><img src="CPlusPlus.svg" alt="C Logo" style="width: 100px; height: 100px;"></li>
+        <li><img src="csharp.svg" alt="C# Logo" style="width: 100px; height: 100px;"></li>
+        <li><img src="java.svg" alt="Java Logo" style="width: 100px; height: 100px;"></li>
+        <li><img src="JS.svg" alt="JavaScript Logo" style="width: 100px; height: 100px;"></li>
+        <li><img src="kotlin.svg" alt="Kotlin Logo" style="width: 100px; height: 75px;"></li>
+        <li><img src="visual-studio-code.svg" alt="VS Logo" style="width: 100px; height: 100px;"></li>
+       
+        <!-- Add more skills here -->
+    </ul>
+</section>
 
-    <section id="soft-skills">
+
+
+    <section id="frameworks">
         <h2>Frameworks</h2>
-        <ul>
-            <li>Laravel</li>
-            <li>CodeIgnitor</li>
-            <li>Django</li>
-            <li>Flask for Python</li>
+        <ul class="skills-list">
+            
+            <li><img src="codeigniter.svg" alt="CodeIgnitor" style="width: 100px; height: 100px;"></li>
+            <li><img src="flask.svg" alt="Flask" style="width: 100px; height: 100px;"></li>
+            <li><img src="django.svg" alt="Django" style="width: 100px; height: 100px;"></li>
             <!-- Add more soft skills here -->
         </ul>
     </section>
 
-    <section id="work epxerience">
+    <section id="work_experience">
         <h2>WORK EXPERIENCE</h2>
         <ul>
             <li>April 2023 – August 2023: Assistant Junior Data Specialist. </li>
@@ -295,7 +372,7 @@
 
 
 
-    <section id="Hobbies">
+    <section id="Learning">
         <h2>LEARNING TIMELINE </h2>
     <div class="timeline">
         <div class="container left">
@@ -341,8 +418,20 @@
     
     
     <footer>
-        
-        <p>&copy; 2024 Virginias Wang'ang'a</p>
+        <p>Contact me:</p>
+        <div class="contact-links">
+            <a href="https://www.linkedin.com/in/virginia-wanjiru-0852641b0/" target="_blank" title="LinkedIn">
+                <img src="linkedin.svg" alt="LinkedIn Icon" style="width: 30px; height: 50px;">
+            </a>
+            <a href="https://github.com/VirginiaWanjiru" target="_blank" title="GitHub">
+                <img src="github.svg" alt="GitHub Icon"style="width: 30px; height: 50px;">
+            </a>
+            <a >
+                <img src="gmail.svg" alt="Gmail Icon"style="width: 30px; height: 50px;">
+                <h3>virginiachristine55@gmail.com</h3>
+            </a>
+        </div>
+        <p>&copy; 2024 Virginia's Wang'ang'a</p>
     </footer>
 
     
