@@ -11,12 +11,13 @@
 
 nav {
             background-color: rgb(13, 13, 69);
-            padding: 1em;
+            padding: 0.5em;
             text-align: center;
+            flex-basis: 100%; /* Take up the full width */
         }
 
         nav a {
-            color: rgba(194, 185, 14, 0.57);
+            color: rgba(232, 232, 231, 0.876);
             text-decoration: none;
             margin: 0 15px;
             font-weight: bold;
@@ -24,7 +25,7 @@ nav {
         }
 
         nav a:hover {
-            color: #eae8e6; /* Change to your desired hover color */
+            color: #ffffff; /* Change to your desired hover color */
         }
 
         /* Smooth scrolling effect */
@@ -64,38 +65,22 @@ nav {
             flex-basis: 70%; /* Take up 70% of the available space */
         }
 
-        #profile-photo {
-    flex-basis: 30%;
-    text-align: center;
-    margin-top: 2em;
-    margin-left: 35%; /* Adjust the left margin for smaller screens */
-}
+        
 
-@media (min-width: 768px) {
-    #profile-photo {
-        margin-left: 35%; /* Adjust the left margin for medium-sized screens */
-    }
-}
 
-@media (min-width: 1200px) {
-    #profile-photo {
-        margin-left: 35%; /* Adjust the left margin for larger screens */
-        margin-top:5%;
-    }
-}
+
+
 
 img {
     width: 100%;
     border-radius: 20%;
 }
 
-#profile-photo img {
-    border-radius: 50%; /* Make the border-radius fully circular for the profile photo */
-}
+
 
 
         h2 {
-            color: #fff9f9;
+            color: #121111;
         }
 
         ul {
@@ -293,9 +278,7 @@ img {
         <p>VIRGINIA WANG'ANG'A</p>
     </header>
 
-    <div id="profile-photo" style="border: 10px solid navy; border-radius: 15px; padding: 10px; background-color: white;">
-        <img src="Virgie.jpeg" alt="Profile Photo" style="width: 100%; border-radius: 15px;">
-    </div>
+    
     
     <section id="introduction">
         <h2>PROFESSIONAL SUMMARY</h2>
