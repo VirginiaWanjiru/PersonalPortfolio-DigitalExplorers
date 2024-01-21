@@ -23,3 +23,4 @@ function type() {
 window.onload = function () {
     type();
 };
+
