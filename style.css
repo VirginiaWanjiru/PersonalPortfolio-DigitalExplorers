@@ -1,0 +1,259 @@
+nav {
+    background-color: rgb(13, 13, 69);
+    padding: 0.5em;
+    text-align: center;
+    flex-basis: 100%; /* Take up the full width */
+}
+
+nav a {
+    color: rgba(232, 232, 231, 0.876);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #ffffff; /* Change to your desired hover color */
+}
+ 
+
+
+
+
+/* Smooth scrolling effect */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    background-image: url('bg1.jpg'); /* Replace 'BG.jpg' with the correct path to your image */
+    background-size: cover; /* This property ensures that the background image covers the entire body */
+    background-position: center; /* This property centers the background image */
+    background-color: rgba(89, 89, 89, 0.48);
+     /* Adjust the alpha value (0.5) to control the transparency */
+    color: #0c0c0c; /* Text color for better visibility on the background image */
+    display: flex; /* Use flexbox to align items */
+    justify-content: space-between; /* Space between header and content */
+    align-items: center; /* Center items vertically */
+    flex-wrap: wrap; /* Wrap items to the next line if needed */
+}
+
+
+
+header {
+    background-color: #4a4949aa;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    flex-basis: 100%; /* Take up the full width */
+}
+
+section {
+    padding: 2em;
+    flex-basis: 70%; /* Take up 70% of the available space */
+}
+
+#profile-photo {
+flex-basis: 30%;
+text-align: center;
+margin-top: 2em;
+margin-left: 35%; /* Adjust the left margin for smaller screens */
+}
+
+
+
+
+
+img {
+width: 100%;
+border-radius: 20%;
+}
+
+
+
+
+h2 {
+    color: #121111;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 1em;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    flex-basis: 100%; /* Take up the full width */
+}
+
+.creative-skills-list {
+list-style: none;
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+justify-content: center;
+}
+
+.creative-skills-list li {
+width: 80px; /* Set a suitable width for your images */
+text-align: center;
+}
+
+.skills-list {
+list-style: none;
+display: flex;
+flex-wrap: wrap;
+gap: 30px;
+justify-content: center;
+}
+
+.skills-list li {
+width: 200px; /* Set a suitable width for your images */
+text-align: right; /* Align the text content to the right */
+}
+
+
+
+{
+   box-sizing: border-box;
+}
+
+
+
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+position: relative;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+content: '';
+position: absolute;
+width: 6px;
+background-color: white;
+top: 0;
+bottom: 0;
+left: 50%;
+margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+padding: 10px 40px;
+position: relative;
+background-color: inherit;
+width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+content: '';
+position: absolute;
+width: 25px;
+height: 25px;
+right: -17px;
+background-color: white;
+border: 4px solid #FF9F55;
+top: 15px;
+border-radius: 50%;
+z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+left: 0;
+}
+
+/* Place the container to the right */
+.right {
+left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+content: " ";
+height: 0;
+position: absolute;
+top: 22px;
+width: 0;
+z-index: 1;
+right: 30px;
+border: medium solid white;
+border-width: 10px 0 10px 10px;
+border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+content: " ";
+height: 0;
+position: absolute;
+top: 22px;
+width: 0;
+z-index: 1;
+left: 30px;
+border: medium solid white;
+border-width: 10px 10px 10px 0;
+border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+left: -16px;
+}
+
+/* The actual content */
+.content {
+padding: 20px 30px;
+background-color: white;
+position: relative;
+border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+/* Place the timelime to the left */
+.timeline::after {
+left: 31px;
+}
+
+/* Full-width containers */
+.container {
+width: 100%;
+padding-left: 70px;
+padding-right: 25px;
+}
+
+/* Make sure that all arrows are pointing leftwards */
+.container::before {
+left: 60px;
+border: medium solid white;
+border-width: 10px 10px 10px 0;
+border-color: transparent white transparent transparent;
+}
+
+/* Make sure all circles are at the same spot */
+.left::after, .right::after {
+left: 15px;
+}
+
+/* Make all right containers behave like the left ones */
+.right {
+left: 0%;
+}
+}
